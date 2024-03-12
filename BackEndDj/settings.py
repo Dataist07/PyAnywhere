@@ -105,13 +105,13 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.mysql',
 
-        'NAME': 'bubu0797$comparator',
+        'NAME': 'compar0797$comparator',
 
-        'USER': 'bubu0797',
+        'USER': 'compar0797',
 
         'PASSWORD': 'Polytech0797',
 
-        'HOST': 'bubu0797.mysql.pythonanywhere-services.com',
+        'HOST': 'compar0797.mysql.eu.pythonanywhere-services.com',
 
         'PORT': '3306',
     }

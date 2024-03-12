@@ -19,7 +19,7 @@ class Supermarket(models.Model):
     def __str__(self):
         return self.nom_drive
 
-class Product(models.Model):
+class AuchanProduct(models.Model):
     
     supermarket = models.CharField(max_length=255, null=True, blank=True)
     nom_drive = models.CharField(max_length=255, null=True, blank=True)
@@ -33,6 +33,96 @@ class Product(models.Model):
     lien_image = models.URLField(max_length=255, null=True, blank=True)    
     class Meta:
         managed = False
+        db_table='Auchanproduct'
+    def __str__(self):
+        return self.nom_produit
+    
+class CarrefourProduct(models.Model):
+    
+    supermarket = models.CharField(max_length=255, null=True, blank=True)
+    nom_drive = models.CharField(max_length=255, null=True, blank=True)
+    nom_driveUrl = models.CharField(max_length=255, blank=True)
+    rayon_principal = models.CharField(max_length=255)
+    rayon_secondaire = models.CharField(max_length=255)
+    nom_produit = models.CharField(max_length=255)
+    prix_produit = models.DecimalField(max_digits=10, decimal_places=2)
+    prix_ratio = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    unite = models.CharField(max_length=255, null=True, blank=True)
+    lien_image = models.URLField(max_length=255, null=True, blank=True)    
+    class Meta:
+        managed = False
+        db_table='Carrefourproduct'
+    def __str__(self):
+        return self.nom_produit
+    
+class CasinoProduct(models.Model):
+    
+    supermarket = models.CharField(max_length=255, null=True, blank=True)
+    nom_drive = models.CharField(max_length=255, null=True, blank=True)
+    nom_driveUrl = models.CharField(max_length=255, blank=True)
+    rayon_principal = models.CharField(max_length=255)
+    rayon_secondaire = models.CharField(max_length=255)
+    nom_produit = models.CharField(max_length=255)
+    prix_produit = models.DecimalField(max_digits=10, decimal_places=2)
+    prix_ratio = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    unite = models.CharField(max_length=255, null=True, blank=True)
+    lien_image = models.URLField(max_length=255, null=True, blank=True)    
+    class Meta:
+        managed = False
+        db_table='Casinoproduct'
+    def __str__(self):
+        return self.nom_produit
+    
+class LeclercProduct(models.Model):
+    
+    supermarket = models.CharField(max_length=255, null=True, blank=True)
+    nom_drive = models.CharField(max_length=255, null=True, blank=True)
+    nom_driveUrl = models.CharField(max_length=255, blank=True)
+    rayon_principal = models.CharField(max_length=255)
+    rayon_secondaire = models.CharField(max_length=255)
+    nom_produit = models.CharField(max_length=255)
+    prix_produit = models.DecimalField(max_digits=10, decimal_places=2)
+    prix_ratio = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    unite = models.CharField(max_length=255, null=True, blank=True)
+    lien_image = models.URLField(max_length=255, null=True, blank=True)    
+    class Meta:
+        managed = False
+        db_table='Leclercproduct'
+    def __str__(self):
+        return self.nom_produit
+    
+class IntermarcheProduct(models.Model):
+    
+    supermarket = models.CharField(max_length=255, null=True, blank=True)
+    nom_drive = models.CharField(max_length=255, null=True, blank=True)
+    nom_driveUrl = models.CharField(max_length=255, blank=True)
+    rayon_principal = models.CharField(max_length=255)
+    rayon_secondaire = models.CharField(max_length=255)
+    nom_produit = models.CharField(max_length=255)
+    prix_produit = models.DecimalField(max_digits=10, decimal_places=2)
+    prix_ratio = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    unite = models.CharField(max_length=255, null=True, blank=True)
+    lien_image = models.URLField(max_length=255, null=True, blank=True)    
+    class Meta:
+        managed = False
+        db_table='Intermarcheproduct'
+    def __str__(self):
+        return self.nom_produit
+    
+class Product(models.Model):
+    
+    supermarket = models.CharField(max_length=255, null=True, blank=True)
+    nom_drive = models.CharField(max_length=255, null=True, blank=True)
+    nom_driveUrl = models.CharField(max_length=255, blank=True)
+    rayon_principal = models.CharField(max_length=255)
+    rayon_secondaire = models.CharField(max_length=255)
+    nom_produit = models.CharField(max_length=255)
+    prix_produit = models.DecimalField(max_digits=10, decimal_places=2)
+    prix_ratio = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    unite = models.CharField(max_length=255, null=True, blank=True)
+    lien_image = models.URLField(max_length=255, null=True, blank=True)    
+    class Meta:
+        #managed = False
         db_table='product'
     def __str__(self):
         return self.nom_produit
